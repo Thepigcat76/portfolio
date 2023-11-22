@@ -13,8 +13,68 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-color: black;
-    width: 100px;
-    height: 100px; /* Viewport height */
-    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 900px;
+    height: 750px; /* Viewport height */
+    border-radius: 45px;
+    color: #fff;
+}
+
+.close-button {
+    position: relative;
+    bottom: 42%;
+    left: 47%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, 0); /* Center the div horizontally */
+    background-color: #50505048;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.close-button:hover {
+    background-color: #505050ad;
+}
+
+.closing-button {
+    position: absolute;
+    top: 5px; /* Adjust the top position */
+    right: 19px; /* Adjust the right position */
+    width: 30px; /* Adjust the width of the button */
+    height: 30px; /* Adjust the height of the button */
+    background-color: #007bff00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none; /* Remove the default focus outline */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closing-button::before,
+.closing-button::after {
+    content: '';
+    position: absolute;
+    bottom: 1%;
+    width: 50px; /* Adjust the size of the lines */
+    height: 2.5px; /* Adjust the thickness of the lines */
+    background-color: #fff;
+}
+
+.closing-button::before {
+    transform: rotate(45deg);
+}
+
+.closing-button::after {
+    transform: rotate(-45deg);
+}
+
+.selection-bar {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 200px;
+    height: 100px;
 }
