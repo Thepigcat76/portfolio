@@ -5,43 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Benedikt's portfolio</title>
 
-    <link rel="icon" href="folder-open-solid.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/folder-open-solid.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div class="selection-bar" id="selection-bar">
+    <div id="main">
+      <div class="selection-bar" id="selection-bar">
         <button class="projects" onclick="openProjectsMenu()">
           <div class="projects-content">
-            <img width="100px" height="100px" src="projects.svg" alt="projects-image">
-            <p>Projects</p>
+            <img
+              width="100px"
+              height="100px"
+              src="assets/projects.svg"
+              alt="projects-image"
+            />
+            <p>Projekte</p>
           </div>
         </button>
 
-        <div class="hobbies">
+        <button class="hobbies" onclick="openHobbiesMenu()">
+          <div class="hobbies-content">
+            <img
+              width="100px"
+              height="100px"
+              src="assets/hobbies.svg"
+              alt="hobbies-image"
+            />
+            <p>Hobbies</p>
+          </div>
+        </button>
+      </div>
 
+      <div class="projects-menu" id="projects-menu">
+        <div class="pClose-button">
+          <button class="pClosing-button" onclick="closeMenu()"></button>
         </div>
-    </div>
+        <ul>
+          <p>Meine Projekte 🔧:</p>
+          <li>
+            <a href="https://github.com/Isible/nexus">Nexus</a> - eine
+            Programmier-<br />
+            sprache in rust 🦀
+          </li>
+          <li>
+            <a href="https://github.com/MuffinGroup/yet-to-be-named-game"
+              >YTBNG</a
+            >
+            - ein Videospiel in <br />
+            python 🐍
+          </li>
+          <li>
+            <a href="https://github.com/Isible/qwark-lib">Qwark</a> - eine
+            Component-library für die
+            <a href="https://qwik.builder.io/">Qwik</a> web-framework ⚡️ 
+          </li>
+        </ul>
+      </div>
 
-    <div class="main-menu" id="main-menu">
-        <div class="close-button">
-            <button class="closing-button" onclick="closeMenu()"></button>
+      <div class="hobbies-menu" id="hobbies-menu">
+        <div class="hClose-button">
+          <button class="hClosing-button" onclick="closeMenu()"></button>
         </div>
+        <ul>
+          <p>Ich interressiere mich für 🔧:</p>
+          <li>Programmierung 👨‍💻</li>
+          <li>Chemie 👨‍🔬</li>
+          <li>Mathematik 🔢</li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
 
-<script>
-    var menu = document.getElementById("main-menu");
-    var closeButton =/** @type {HTMLElement} */ (document.querySelector('#main-menu .close-button .closing-button'));
-    var selectionBar = document.getElementById("selection-bar");
-
-    function closeMenu() {
-        menu.style.display = "none";
-        selectionBar.style.display = "flex";
-    }
-
-    function openProjectsMenu() {
-        selectionBar.style.display = "none";
-        menu.style.display = "flex"
-    }
-</script>
+<script src="src/script.js"></script>

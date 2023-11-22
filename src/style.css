@@ -77,7 +77,6 @@ body {
 
 .hobbies {
     position: absolute;
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(23, 173, 173, 0.308);
@@ -86,6 +85,33 @@ body {
     border-radius: 25px;
     left: 53%;
     transition: 0.4s;
+    color: white;
+    font-size: 40px;
+    text-align: center; /* Center the content */
+    border: none;
+}
+
+.hobbies-content {
+    position: relative;
+    top: 10%;
+    transition: 0.4s;
+}
+
+.hobbies img {
+    max-width: 100%; /* Make sure the image doesn't exceed its container's width */
+    display: block; /* Remove extra space below the image */
+    margin: 0 auto; /* Center the image within its container */   
+    transition: 0.4s;
+    user-select: none;
+    pointer-events: none;
+}
+
+
+.hobbies p {
+    margin-top: 10px; /* Add some space between the image and the paragraph */
+    transition: 0.4s;
+    user-select: none;
+    pointer-events: none;
 }
 
 .hobbies:hover {
@@ -93,9 +119,19 @@ body {
     background-color: rgba(23, 173, 173, 0.534);
     width: 300px;
     height: 300px;
+    cursor: pointer;
 }
 
-.main-menu {
+.hobbies:hover img {
+    width: 150px;
+    height: 150px;
+}
+
+.hobbies:hover p {
+    font-size: 60px;
+}
+
+.projects-menu {
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -105,9 +141,25 @@ body {
     border-radius: 45px;
     color: #fff;
     display: none;
+    transition: opacity 0.5s ease;
 }
 
-.close-button {
+.projects-menu ul p {
+    position: relative;
+    right: 50px;
+    font-size: 60px;
+    margin: 0;
+}
+
+.projects-menu ul {
+    font-size: 45px;
+}
+
+.projects-menu ul a {
+    color: rgb(13, 114, 114);
+}
+
+.pClose-button {
     position: relative;
     bottom: 42%;
     left: 47%;
@@ -121,11 +173,11 @@ body {
     border-radius: 100%;
 }
 
-.close-button:hover {
+.pClose-button:hover {
     background-color: #505050ad;
 }
 
-.closing-button {
+.pClosing-button {
     position: absolute;
     bottom: 1%;
     right: 0px; /* Adjust the right position */
@@ -142,8 +194,8 @@ body {
     justify-content: center;
 }
 
-.closing-button::before,
-.closing-button::after {
+.pClosing-button::before,
+.pClosing-button::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -152,10 +204,88 @@ body {
     background-color: #fff;
 }
 
-.closing-button::before {
+.pClosing-button::before {
     transform: rotate(45deg);
 }
 
-.closing-button::after {
+.pClosing-button::after {
+    transform: rotate(-45deg);
+}
+
+
+.hobbies-menu {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 900px;
+    height: 750px; /* Viewport height */
+    border-radius: 45px;
+    color: #fff;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+.hobbies-menu ul p {
+    position: relative;
+    right: 50px;
+    font-size: 60px;
+    margin: 0;
+}
+
+.hobbies-menu ul {
+    font-size: 50px;
+}
+
+.hClose-button {
+    position: relative;
+    bottom: 42%;
+    left: 90%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, 0); /* Center the div horizontally */
+    background-color: #50505048;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.hClose-button:hover {
+    background-color: #505050ad;
+}
+
+.hClosing-button {
+    position: absolute;
+    bottom: 1%;
+    right: 0px; /* Adjust the right position */
+    width: 70px; /* Adjust the width of the button */
+    height: 70px; /* Adjust the height of the button */
+    background-color: #007bff00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none; /* Remove the default focus outline */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hClosing-button::before,
+.hClosing-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px; /* Adjust the size of the lines */
+    height: 2.5px; /* Adjust the thickness of the lines */
+    background-color: #fff;
+}
+
+.hClosing-button::before {
+    transform: rotate(45deg);
+}
+
+.hClosing-button::after {
     transform: rotate(-45deg);
 }
