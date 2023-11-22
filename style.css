@@ -32,13 +32,13 @@ body {
     color: white;
     font-size: 40px;
     text-align: center; /* Center the content */
+    border: none;
 }
 
 .projects-content {
     position: relative;
     top: 10%;
     transition: 0.4s;
-    pointer-events: none;
 }
 
 .projects img {
@@ -46,12 +46,16 @@ body {
     display: block; /* Remove extra space below the image */
     margin: 0 auto; /* Center the image within its container */   
     transition: 0.4s;
+    user-select: none;
+    pointer-events: none;
 }
 
 
 .projects p {
     margin-top: 10px; /* Add some space between the image and the paragraph */
     transition: 0.4s;
+    user-select: none;
+    pointer-events: none;
 }
 
 .projects:hover {
@@ -59,6 +63,7 @@ body {
     background-color: rgba(23, 173, 173, 0.534);
     width: 300px;
     height: 300px;
+    cursor: pointer;
 }
 
 .projects:hover img {
@@ -91,7 +96,6 @@ body {
 }
 
 .main-menu {
-    display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -123,10 +127,10 @@ body {
 
 .closing-button {
     position: absolute;
-    top: 5px; /* Adjust the top position */
-    right: 19px; /* Adjust the right position */
-    width: 30px; /* Adjust the width of the button */
-    height: 30px; /* Adjust the height of the button */
+    bottom: 1%;
+    right: 0px; /* Adjust the right position */
+    width: 70px; /* Adjust the width of the button */
+    height: 70px; /* Adjust the height of the button */
     background-color: #007bff00;
     color: #fff;
     border: none;
@@ -142,7 +146,7 @@ body {
 .closing-button::after {
     content: '';
     position: absolute;
-    bottom: 1%;
+    top: 50%;
     width: 50px; /* Adjust the size of the lines */
     height: 2.5px; /* Adjust the thickness of the lines */
     background-color: #fff;

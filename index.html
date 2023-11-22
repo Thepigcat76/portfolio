@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="selection-bar">
-        <div class="projects">
+    <div class="selection-bar" id="selection-bar">
+        <button class="projects" onclick="openProjectsMenu()">
           <div class="projects-content">
             <img width="100px" height="100px" src="projects.svg" alt="projects-image">
             <p>Projects</p>
           </div>
-        </div>
+        </button>
 
         <div class="hobbies">
 
@@ -32,8 +32,16 @@
 
 <script>
     var menu = document.getElementById("main-menu");
+    var closeButton =/** @type {HTMLElement} */ (document.querySelector('#main-menu .close-button .closing-button'));
+    var selectionBar = document.getElementById("selection-bar");
 
     function closeMenu() {
         menu.style.display = "none";
+        selectionBar.style.display = "flex";
+    }
+
+    function openProjectsMenu() {
+        selectionBar.style.display = "none";
+        menu.style.display = "flex"
     }
 </script>
