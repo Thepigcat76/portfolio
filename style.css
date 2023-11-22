@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(16, 168, 168);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: black;
+    width: 100px;
+    height: 100px; /* Viewport height */
+}
