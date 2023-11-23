@@ -1,291 +1,309 @@
 body {
-    background-color: rgb(23, 173, 173);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Viewport height */
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  background-color: rgb(14, 48, 48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Viewport height */
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 .selection-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 700px;
-    height: 400px;
-    border-radius: 25px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(29, 72, 80, 0.8);
+  width: 700px;
+  height: 400px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
+.cursor-following {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.8);
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    to {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.6);
+    }
+  }
+
 .projects {
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(23, 173, 173, 0.308);
-    width: 200px;
-    height: 200px;
-    border-radius: 25px;
-    right: 53%;
-    transition: 0.4s;
-    color: white;
-    font-size: 40px;
-    text-align: center; /* Center the content */
-    border: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(23, 173, 173, 0.308);
+  width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  right: 53%;
+  transition: 0.4s;
+  color: white;
+  font-size: 40px;
+  text-align: center; /* Center the content */
+  border: none;
 }
 
 .projects-content {
-    position: relative;
-    top: 10%;
-    transition: 0.4s;
+  position: relative;
+  top: 10%;
+  transition: 0.4s;
 }
 
 .projects img {
-    max-width: 100%; /* Make sure the image doesn't exceed its container's width */
-    display: block; /* Remove extra space below the image */
-    margin: 0 auto; /* Center the image within its container */   
-    transition: 0.4s;
-    user-select: none;
-    pointer-events: none;
+  max-width: 100%; /* Make sure the image doesn't exceed its container's width */
+  display: block; /* Remove extra space below the image */
+  margin: 0 auto; /* Center the image within its container */
+  transition: 0.4s;
+  user-select: none;
+  pointer-events: none;
 }
 
-
 .projects p {
-    margin-top: 10px; /* Add some space between the image and the paragraph */
-    transition: 0.4s;
-    user-select: none;
-    pointer-events: none;
+  margin-top: 10px; /* Add some space between the image and the paragraph */
+  transition: 0.4s;
+  user-select: none;
+  pointer-events: none;
 }
 
 .projects:hover {
-    right: 51%;
-    background-color: rgba(23, 173, 173, 0.534);
-    width: 300px;
-    height: 300px;
-    cursor: pointer;
+  right: 51%;
+  background-color: rgba(23, 173, 173, 0.534);
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
 }
 
 .projects:hover img {
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 .projects:hover p {
-    font-size: 60px;
+  font-size: 60px;
 }
 
 .hobbies {
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(23, 173, 173, 0.308);
-    width: 200px;
-    height: 200px;
-    border-radius: 25px;
-    left: 53%;
-    transition: 0.4s;
-    color: white;
-    font-size: 40px;
-    text-align: center; /* Center the content */
-    border: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(23, 173, 173, 0.308);
+  width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  left: 53%;
+  transition: 0.4s;
+  color: white;
+  font-size: 40px;
+  text-align: center; /* Center the content */
+  border: none;
 }
 
 .hobbies-content {
-    position: relative;
-    top: 10%;
-    transition: 0.4s;
+  position: relative;
+  top: 10%;
+  transition: 0.4s;
 }
 
 .hobbies img {
-    max-width: 100%; /* Make sure the image doesn't exceed its container's width */
-    display: block; /* Remove extra space below the image */
-    margin: 0 auto; /* Center the image within its container */   
-    transition: 0.4s;
-    user-select: none;
-    pointer-events: none;
+  max-width: 100%; /* Make sure the image doesn't exceed its container's width */
+  display: block; /* Remove extra space below the image */
+  margin: 0 auto; /* Center the image within its container */
+  transition: 0.4s;
+  user-select: none;
+  pointer-events: none;
 }
 
-
 .hobbies p {
-    margin-top: 10px; /* Add some space between the image and the paragraph */
-    transition: 0.4s;
-    user-select: none;
-    pointer-events: none;
+  margin-top: 10px; /* Add some space between the image and the paragraph */
+  transition: 0.4s;
+  user-select: none;
+  pointer-events: none;
 }
 
 .hobbies:hover {
-    left: 51%;
-    background-color: rgba(23, 173, 173, 0.534);
-    width: 300px;
-    height: 300px;
-    cursor: pointer;
+  left: 51%;
+  background-color: rgba(23, 173, 173, 0.534);
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
 }
 
 .hobbies:hover img {
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 .hobbies:hover p {
-    font-size: 60px;
+  font-size: 60px;
 }
 
 .projects-menu {
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 900px;
-    height: 750px; /* Viewport height */
-    border-radius: 45px;
-    color: #fff;
-    display: none;
-    transition: opacity 0.5s ease;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 900px;
+  height: 750px; /* Viewport height */
+  border-radius: 45px;
+  color: #fff;
+  display: none;
+  transition: opacity 0.5s ease;
 }
 
 .projects-menu ul p {
-    position: relative;
-    right: 50px;
-    font-size: 60px;
-    margin: 0;
+  position: relative;
+  right: 50px;
+  font-size: 60px;
+  margin: 0;
 }
 
 .projects-menu ul {
-    font-size: 45px;
+  font-size: 45px;
 }
 
 .projects-menu ul a {
-    color: rgb(13, 114, 114);
+  color: rgb(13, 114, 114);
 }
 
 .pClose-button {
-    position: relative;
-    bottom: 42%;
-    left: 47%;
-    width: 50px;
-    height: 50px;
-    transform: translate(-50%, 0); /* Center the div horizontally */
-    background-color: #50505048;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 100%;
+  position: relative;
+  bottom: 42%;
+  left: 47%;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, 0); /* Center the div horizontally */
+  background-color: #50505048;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 100%;
 }
 
 .pClose-button:hover {
-    background-color: #505050ad;
+  background-color: #505050ad;
 }
 
 .pClosing-button {
-    position: absolute;
-    bottom: 1%;
-    right: 0px; /* Adjust the right position */
-    width: 70px; /* Adjust the width of the button */
-    height: 70px; /* Adjust the height of the button */
-    background-color: #007bff00;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    outline: none; /* Remove the default focus outline */
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  bottom: 1%;
+  right: 0px; /* Adjust the right position */
+  width: 70px; /* Adjust the width of the button */
+  height: 70px; /* Adjust the height of the button */
+  background-color: #007bff00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none; /* Remove the default focus outline */
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pClosing-button::before,
 .pClosing-button::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 50px; /* Adjust the size of the lines */
-    height: 2.5px; /* Adjust the thickness of the lines */
-    background-color: #fff;
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50px; /* Adjust the size of the lines */
+  height: 2.5px; /* Adjust the thickness of the lines */
+  background-color: #fff;
 }
 
 .pClosing-button::before {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .pClosing-button::after {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
-
 .hobbies-menu {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 900px;
-    height: 750px; /* Viewport height */
-    border-radius: 45px;
-    color: #fff;
-    display: none;
-    transition: opacity 0.5s ease;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 900px;
+  height: 750px; /* Viewport height */
+  border-radius: 45px;
+  color: #fff;
+  display: none;
+  transition: opacity 0.5s ease;
 }
 
 .hobbies-menu ul p {
-    position: relative;
-    right: 50px;
-    font-size: 60px;
-    margin: 0;
+  position: relative;
+  right: 50px;
+  font-size: 60px;
+  margin: 0;
 }
 
 .hobbies-menu ul {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 .hClose-button {
-    position: relative;
-    bottom: 42%;
-    left: 90%;
-    width: 50px;
-    height: 50px;
-    transform: translate(-50%, 0); /* Center the div horizontally */
-    background-color: #50505048;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 100%;
+  position: relative;
+  bottom: 42%;
+  left: 90%;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, 0); /* Center the div horizontally */
+  background-color: #50505048;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 100%;
 }
 
 .hClose-button:hover {
-    background-color: #505050ad;
+  background-color: #505050ad;
 }
 
 .hClosing-button {
-    position: absolute;
-    bottom: 1%;
-    right: 0px; /* Adjust the right position */
-    width: 70px; /* Adjust the width of the button */
-    height: 70px; /* Adjust the height of the button */
-    background-color: #007bff00;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    outline: none; /* Remove the default focus outline */
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  bottom: 1%;
+  right: 0px; /* Adjust the right position */
+  width: 70px; /* Adjust the width of the button */
+  height: 70px; /* Adjust the height of the button */
+  background-color: #007bff00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none; /* Remove the default focus outline */
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hClosing-button::before,
 .hClosing-button::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 50px; /* Adjust the size of the lines */
-    height: 2.5px; /* Adjust the thickness of the lines */
-    background-color: #fff;
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50px; /* Adjust the size of the lines */
+  height: 2.5px; /* Adjust the thickness of the lines */
+  background-color: #fff;
 }
 
 .hClosing-button::before {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .hClosing-button::after {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
