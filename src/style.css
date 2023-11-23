@@ -22,23 +22,32 @@ body {
 }
 
 .cursor-following {
-  position: absolute;
+  position: fixed;
+  pointer-events: none;
   width: 10px;
   height: 10px;
   background-color: #fff;
   border-radius: 50%;
+  opacity: 0;
+  z-index: 1000000; /* Do this to ensure it's always on the top */
   box-shadow: 0 0 100px rgba(255, 255, 255, 0.8);
-  animation: glow 3s infinite alternate;
+  transition: opacity 1s ease;
+  animation: glow 2s infinite alternate;
+}
+
+body:hover > .cursor-following {
+  opacity: 1;
 }
 
 @keyframes glow {
-    from {
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    }
-    to {
-      box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.6);
-    }
+  from {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
   }
+  to {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1),
+      0 0 30px rgba(255, 255, 255, 0.6);
+  }
+}
 
 .projects {
   position: absolute;
@@ -165,12 +174,15 @@ body {
 
 .projects-menu ul p {
   position: relative;
-  right: 50px;
+  left: 26px;
+  text-decoration: underline;
   font-size: 60px;
   margin: 0;
 }
 
-.projects-menu ul {
+.projects-menu ul li {
+  position: relative;
+  left: 3%;
   font-size: 45px;
 }
 
@@ -178,11 +190,25 @@ body {
   color: rgb(13, 114, 114);
 }
 
+.projects-menu ul {
+  position: relative;
+  top: 10%;
+}
+
+.projects-list {
+  position: relative;
+  right: 5%;
+  height: 500px;
+  background-color: rgba(20, 31, 41, 0.596);
+  border-width: medium;
+  border-radius: 2%;
+}
+
 .pClose-button {
   position: relative;
   bottom: 42%;
-  left: 47%;
-  width: 50px;
+  left: 93%;
+  width: 55px;
   height: 50px;
   transform: translate(-50%, 0); /* Center the div horizontally */
   background-color: #50505048;
@@ -246,19 +272,33 @@ body {
 
 .hobbies-menu ul p {
   position: relative;
+  text-decoration: underline;
   right: 50px;
   font-size: 60px;
   margin: 0;
 }
 
 .hobbies-menu ul {
+  position: relative;
+  top: 15%;
+  left: 120px;
   font-size: 50px;
+}
+
+.hobbies-list {
+  position: relative;
+  right: 5%;
+  height: 500px;
+  width: 700px;
+  background-color: rgba(20, 31, 41, 0.596);
+  border-width: medium;
+  border-radius: 2%;
 }
 
 .hClose-button {
   position: relative;
   bottom: 42%;
-  left: 90%;
+  left: 86%;
   width: 50px;
   height: 50px;
   transform: translate(-50%, 0); /* Center the div horizontally */
